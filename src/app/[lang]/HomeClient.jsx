@@ -21,7 +21,7 @@ const staggerContainer = {
   }
 };
 
-export default function Home() {
+export default function HomeClient({ dict, lang }) {
   return (
     <>
       {/* Hero Section */}
@@ -41,27 +41,27 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--color-primary-500)] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--color-primary-500)]"></span>
               </span>
-              Ingénierie & Conseil IT Global
+              {dict.home.heroTag}
             </motion.div>
             
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-              L'excellence technologique au service de votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-primary-500)] to-cyan-400">transformation digitale</span>
+              {dict.home.heroTitle}
             </motion.h1>
             
             <motion.p variants={fadeInUp} className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto">
-              MDS est une société d'ingénierie informatique spécialisée dans le développement de solutions, l'intégration de systèmes complexes et l'infogérance d'infrastructures à l'échelle internationale.
+              {dict.home.heroDesc}
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services">
+              <Link href={`/${lang}/services`}>
                 <Button size="lg" className="w-full sm:w-auto shadow-lg shadow-[var(--color-primary-600)]/30">
-                  Découvrir nos solutions
+                  {dict.home.ctaPrimary}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href={`/${lang}/contact`}>
                 <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/20">
-                  Nous contacter
+                  {dict.home.ctaSecondary}
                 </Button>
               </Link>
             </motion.div>
@@ -72,9 +72,9 @@ export default function Home() {
       {/* Solutions / Services Section */}
       <Section bg="white" id="solutions">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Nos Solutions Expertes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">{dict.home.solutionsTitle}</h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Nous maîtrisons l'ensemble de la chaîne de valeur IT pour vous accompagner de bout en bout, de la stratégie à l'exploitation.
+            {dict.home.solutionsDesc}
           </p>
         </div>
 
@@ -84,37 +84,37 @@ export default function Home() {
               icon: <Globe className="w-8 h-8 text-[var(--color-primary-500)]" />,
               title: "IT Consulting",
               desc: "Accompagnement stratégique des organisations privées et publiques. Nous optimisons vos processus métiers et pilotons votre transformation numérique globale.",
-              href: "/services#consulting"
+              href: `/${lang}/services#consulting`
             },
             {
               icon: <Cloud className="w-8 h-8 text-[var(--color-primary-500)]" />,
               title: "Solutions Cloud",
               desc: "Déploiement d'environnements virtualisés (IaaS, PaaS, SaaS). Nous concevons des architectures cloud hybrides, sécurisées et hautement disponibles.",
-              href: "/services#cloud"
+              href: `/${lang}/services#cloud`
             },
             {
               icon: <ShieldCheck className="w-8 h-8 text-[var(--color-primary-500)]" />,
               title: "IT Outsourcing",
               desc: "Délégation complète de la gestion de votre SI. Maintenance préventive, assistance technique continue (SLA) et infogérance de votre parc applicatif et matériel.",
-              href: "/services#outsourcing"
+              href: `/${lang}/services#outsourcing`
             },
             {
               icon: <Code className="w-8 h-8 text-[var(--color-primary-500)]" />,
               title: "Conception & Intégration",
               desc: "Architecture des systèmes d'information, développement d'applications cross-platform sur mesure et intégration de progiciels (ERP/PGI).",
-              href: "/services#integration"
+              href: `/${lang}/services#integration`
             },
             {
               icon: <Server className="w-8 h-8 text-[var(--color-primary-500)]" />,
               title: "Transformation Data Center",
               desc: "De la planification à l'exécution, nous modernisons vos centres de données pour garantir une infrastructure résiliente, évolutive et performante.",
-              href: "/services#datacenter"
+              href: `/${lang}/services#datacenter`
             },
             {
               icon: <LineChart className="w-8 h-8 text-[var(--color-primary-500)]" />,
               title: "Market Data",
               desc: "Solutions spécialisées pour le secteur financier. Gestion experte des données de marché, intégration de flux boursiers et développement d'applications ad hoc.",
-              href: "/services#market-data"
+              href: `/${lang}/services#market-data`
             }
           ].map((service, i) => (
             <motion.div
@@ -143,35 +143,17 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="inline-block px-3 py-1 rounded-full bg-[var(--color-primary-600)]/10 text-[var(--color-primary-600)] dark:text-[var(--color-primary-500)] text-sm font-semibold mb-4">
-              Notre Différence
+              {dict.home.aboutTag}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              L'alliance de l'innovation et de <span className="text-[var(--color-primary-600)]">l'excellence opérationnelle</span>
+              {dict.home.aboutTitle}
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
-              MDS s'impose comme un acteur de référence grâce à une maîtrise complète des enjeux end-to-end de l'informatique d'entreprise. Nous intégrons les meilleures briques technologiques du marché pour bâtir des socles solides.
+              {dict.home.aboutDesc1}
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-              L'expertise de nos collaborateurs et de notre réseau de partenaires nous permet d'intervenir à l'échelle internationale avec un niveau de qualité de service (SLA) irréprochable.
+              {dict.home.aboutDesc2}
             </p>
-            
-            <div className="space-y-5">
-              {[
-                { icon: <Globe className="text-[var(--color-primary-500)] w-6 h-6" />, title: "Présence Internationale", desc: "Un réseau de partenaires solides pour vous accompagner par-delà les frontières." },
-                { icon: <Zap className="text-[var(--color-primary-500)] w-6 h-6" />, title: "Optimisation des Performances", desc: "Des architectures conçues pour la vitesse, la scalabilité et la résilience." },
-                { icon: <Cpu className="text-[var(--color-primary-500)] w-6 h-6" />, title: "Innovation Continue", desc: "La maîtrise technologique au cœur de notre ADN et de nos recommandations." }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start">
-                  <div className="bg-white dark:bg-[#1e293b] p-2 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 dark:text-white">{item.title}</h4>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
           
           <div className="relative">
@@ -181,13 +163,6 @@ export default function Home() {
                 alt="Infrastructure et équipe IT" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-80"></div>
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl text-white">
-                  <div className="text-3xl font-bold text-[var(--color-primary-500)] mb-1">Un ROI optimal</div>
-                  <div className="text-sm text-slate-300">Nous nous engageons à offrir le meilleur rapport qualité-prix sur l'ensemble de nos intégrations systèmes.</div>
-                </div>
-              </div>
             </div>
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[var(--color-primary-600)] rounded-full blur-3xl opacity-20 -z-0"></div>
@@ -198,9 +173,9 @@ export default function Home() {
       {/* Processus de collaboration (Adapté LkTec / Outsourcing) */}
       <Section bg="white">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Méthodologie & Accompagnement</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">{dict.home.processTitle}</h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Nous proposons un rôle opérationnel de bout en bout, de l'avant-vente à la formation de vos équipes.
+            {dict.home.processDesc}
           </p>
         </div>
 
@@ -226,15 +201,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Passez à la vitesse supérieure
+            {dict.home.ctaFinalTitle}
           </h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Que ce soit pour externaliser votre infrastructure, migrer vers le cloud ou développer des applications sur-mesure, MDS est votre partenaire de confiance.
+            {dict.home.ctaFinalDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`/${lang}/contact`}>
               <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-8">
-                Initier un projet
+                {dict.home.ctaFinalBtn}
               </Button>
             </Link>
           </div>

@@ -2,20 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Menu, X, ShieldCheck } from "lucide-react";
+import { Menu, X, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-const navLinks = [
-  { name: "Accueil", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "À propos", href: "/a-propos" },
-  { name: "Carrières", href: "/carrieres" },
-];
-
-export function Navbar() {
+export function Navbar({ dict, lang }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +19,19 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: dict.navigation.home, href: `/${lang}` },
+    { name: dict.navigation.services, href: `/${lang}/services` },
+    { name: dict.navigation.about, href: `/${lang}/a-propos` },
+    { name: dict.navigation.careers, href: `/${lang}/carrieres` },
+  ];
+
+  const toggleLanguage = () => {
+    const nextLang = lang === 'fr' ? 'en' : 'fr';
+    const newPath = pathname.replace(`/${lang}`, `/${nextLang}`);
+    window.location.href = newPath || `/${nextLang}`;
+  };
 
   return (
     <header
@@ -34,7 +42,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href={`/${lang}`} className="flex items-center gap-2 group">
             <div className="bg-[var(--color-primary-600)] p-2 rounded-lg group-hover:bg-[var(--color-primary-500)] transition-colors">
               <ShieldCheck className="w-6 h-6 text-white" />
             </div>
@@ -54,9 +62,18 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/contact">
+            
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[var(--color-primary-600)] transition-colors"
+            >
+              <Globe className="w-4 h-4" />
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </button>
+
+            <Link href={`/${lang}/contact`}>
               <Button variant="primary" size="sm">
-                Demander un devis
+                {dict.navigation.quote}
               </Button>
             </Link>
           </nav>
@@ -90,9 +107,16 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/contact" onClick={() => setIsOpen(false)} className="px-3 pt-2">
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              <Globe className="w-5 h-5" />
+              {lang === 'fr' ? 'Switch to English' : 'Passer en Français'}
+            </button>
+            <Link href={`/${lang}/contact`} onClick={() => setIsOpen(false)} className="px-3 pt-2">
               <Button variant="primary" className="w-full">
-                Demander un devis
+                {dict.navigation.quote}
               </Button>
             </Link>
           </div>

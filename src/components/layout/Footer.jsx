@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
 
-export function Footer() {
+export function Footer({ dict, lang }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 group">
+            <Link href={`/${lang}`} className="flex items-center gap-2 group">
               <div className="bg-[var(--color-primary-600)] p-2 rounded-lg">
                 <ShieldCheck className="w-6 h-6 text-white" />
               </div>
@@ -19,8 +19,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-400 mt-4 max-w-xs">
-              Votre partenaire stratégique en services IT & support informatique. 
-              Des solutions performantes respectant vos SLA les plus exigeants.
+              {dict.footer.brandDesc}
             </p>
             <div className="flex gap-4 pt-2">
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
@@ -37,32 +36,32 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Nos Solutions</h3>
+            <h3 className="text-white font-semibold mb-4">{dict.footer.solutions}</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/services#consulting" className="hover:text-[var(--color-primary-500)] transition-colors">IT Consulting & Stratégie</Link></li>
-              <li><Link href="/services#cloud" className="hover:text-[var(--color-primary-500)] transition-colors">Solutions Cloud Digitales</Link></li>
-              <li><Link href="/services#outsourcing" className="hover:text-[var(--color-primary-500)] transition-colors">IT Outsourcing & Infogérance</Link></li>
-              <li><Link href="/services#integration" className="hover:text-[var(--color-primary-500)] transition-colors">Conception & Intégration</Link></li>
-              <li><Link href="/services#datacenter" className="hover:text-[var(--color-primary-500)] transition-colors">Transformation Data Center</Link></li>
-              <li><Link href="/services#market-data" className="hover:text-[var(--color-primary-500)] transition-colors">Market Data & Finance</Link></li>
+              <li><Link href={`/${lang}/services#consulting`} className="hover:text-[var(--color-primary-500)] transition-colors">IT Consulting & Stratégie</Link></li>
+              <li><Link href={`/${lang}/services#cloud`} className="hover:text-[var(--color-primary-500)] transition-colors">Solutions Cloud Digitales</Link></li>
+              <li><Link href={`/${lang}/services#outsourcing`} className="hover:text-[var(--color-primary-500)] transition-colors">IT Outsourcing & Infogérance</Link></li>
+              <li><Link href={`/${lang}/services#integration`} className="hover:text-[var(--color-primary-500)] transition-colors">Conception & Intégration</Link></li>
+              <li><Link href={`/${lang}/services#datacenter`} className="hover:text-[var(--color-primary-500)] transition-colors">Transformation Data Center</Link></li>
+              <li><Link href={`/${lang}/services#market-data`} className="hover:text-[var(--color-primary-500)] transition-colors">Market Data & Finance</Link></li>
             </ul>
           </div>
 
           {/* Entreprise */}
           <div>
-            <h3 className="text-white font-semibold mb-4">L'Entreprise</h3>
+            <h3 className="text-white font-semibold mb-4">{dict.footer.company}</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/a-propos" className="hover:text-[var(--color-primary-500)] transition-colors">À propos de MDS</Link></li>
-              <li><Link href="/carrieres" className="hover:text-[var(--color-primary-500)] transition-colors">Carrières & Recrutement</Link></li>
-              <li><Link href="/contact" className="hover:text-[var(--color-primary-500)] transition-colors">Contact</Link></li>
-              <li><Link href="/mentions-legales" className="hover:text-[var(--color-primary-500)] transition-colors">Mentions légales</Link></li>
-              <li><Link href="/confidentialite" className="hover:text-[var(--color-primary-500)] transition-colors">Politique de confidentialité</Link></li>
+              <li><Link href={`/${lang}/a-propos`} className="hover:text-[var(--color-primary-500)] transition-colors">{dict.navigation.about}</Link></li>
+              <li><Link href={`/${lang}/carrieres`} className="hover:text-[var(--color-primary-500)] transition-colors">{dict.navigation.careers}</Link></li>
+              <li><Link href={`/${lang}/contact`} className="hover:text-[var(--color-primary-500)] transition-colors">{dict.navigation.contact}</Link></li>
+              <li><Link href={`/${lang}/mentions-legales`} className="hover:text-[var(--color-primary-500)] transition-colors">Mentions légales</Link></li>
+              <li><Link href={`/${lang}/confidentialite`} className="hover:text-[var(--color-primary-500)] transition-colors">Politique de confidentialité</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <h3 className="text-white font-semibold mb-4">{dict.footer.contact}</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[var(--color-primary-500)] shrink-0" />
@@ -81,8 +80,8 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {currentYear} Modou Digital Services SARLAU. Tous droits réservés.</p>
-          <p>Créé avec passion par MDS.</p>
+          <p>© {currentYear} Modou Digital Services SARLAU. {dict.footer.rights}</p>
+          <p>{dict.footer.madeWith}</p>
         </div>
       </div>
     </footer>

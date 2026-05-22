@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "careers": "Carrières",
+    "quote": "Demander un devis"
+  },
+  "home": {
+    "heroTag": "Ingénierie & Conseil IT Global",
+    "heroTitle": "L'excellence technologique au service de votre transformation digitale",
+    "heroDesc": "MDS est une société d'ingénierie informatique spécialisée dans le développement de solutions, l'intégration de systèmes complexes et l'infogérance d'infrastructures à l'échelle internationale.",
+    "ctaPrimary": "Découvrir nos solutions",
+    "ctaSecondary": "Nous contacter",
+    "solutionsTitle": "Nos Solutions Expertes",
+    "solutionsDesc": "Nous maîtrisons l'ensemble de la chaîne de valeur IT pour vous accompagner de bout en bout, de la stratégie à l'exploitation.",
+    "aboutTag": "Notre Différence",
+    "aboutTitle": "L'alliance de l'innovation et de l'excellence opérationnelle",
+    "aboutDesc1": "MDS s'impose comme un acteur de référence grâce à une maîtrise complète des enjeux end-to-end de l'informatique d'entreprise. Nous intégrons les meilleures briques technologiques du marché pour bâtir des socles solides.",
+    "aboutDesc2": "L'expertise de nos collaborateurs et de notre réseau de partenaires nous permet d'intervenir à l'échelle internationale avec un niveau de qualité de service (SLA) irréprochable.",
+    "processTitle": "Méthodologie & Accompagnement",
+    "processDesc": "Nous proposons un rôle opérationnel de bout en bout, de l'avant-vente à la formation de vos équipes.",
+    "ctaFinalTitle": "Passez à la vitesse supérieure",
+    "ctaFinalDesc": "Que ce soit pour externaliser votre infrastructure, migrer vers le cloud ou développer des applications sur-mesure, MDS est votre partenaire de confiance.",
+    "ctaFinalBtn": "Initier un projet"
+  },
+  "footer": {
+    "brandDesc": "Votre partenaire stratégique en services IT & support informatique. Des solutions performantes respectant vos SLA les plus exigeants.",
+    "solutions": "Nos Solutions",
+    "company": "L'Entreprise",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "madeWith": "Créé avec passion par MDS."
+  }
+}

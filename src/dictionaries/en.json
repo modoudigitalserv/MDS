@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "careers": "Careers",
+    "quote": "Request a Quote"
+  },
+  "home": {
+    "heroTag": "Global IT Engineering & Consulting",
+    "heroTitle": "Technological excellence driving your digital transformation",
+    "heroDesc": "MDS is an IT engineering company specialized in solutions development, complex systems integration, and infrastructure outsourcing on an international scale.",
+    "ctaPrimary": "Discover our solutions",
+    "ctaSecondary": "Contact us",
+    "solutionsTitle": "Our Expert Solutions",
+    "solutionsDesc": "We master the entire IT value chain to support you end-to-end, from strategy to operations.",
+    "aboutTag": "Our Difference",
+    "aboutTitle": "The alliance of innovation and operational excellence",
+    "aboutDesc1": "MDS stands out as a key player through complete mastery of end-to-end enterprise IT challenges. We integrate the best technological bricks on the market to build solid foundations.",
+    "aboutDesc2": "The combined experience of our staff and partner network allows us to operate internationally with an impeccable level of service quality (SLA).",
+    "processTitle": "Methodology & Support",
+    "processDesc": "We offer an end-to-end operational role, from pre-sales to training your teams.",
+    "ctaFinalTitle": "Take it to the next level",
+    "ctaFinalDesc": "Whether outsourcing your infrastructure, migrating to the cloud, or developing custom apps, MDS is your trusted partner.",
+    "ctaFinalBtn": "Start a project"
+  },
+  "footer": {
+    "brandDesc": "Your strategic partner in IT services & support. High-performance solutions meeting your most demanding SLAs.",
+    "solutions": "Our Solutions",
+    "company": "The Company",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with passion by MDS."
+  }
+}
