@@ -25,9 +25,9 @@ export default function HomeClient({ dict, lang }) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#0B1120]">
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#1e293b]">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0B1120]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1e293b]"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
@@ -196,8 +196,8 @@ export default function HomeClient({ dict, lang }) {
       </Section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#0f172a] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary-600)] to-[#0f172a] opacity-90"></div>
+      <section className="py-24 bg-[#1e293b] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary-600)] to-[#1e293b] opacity-90"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
