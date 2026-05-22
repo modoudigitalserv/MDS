@@ -11,12 +11,11 @@ export function Footer({ dict, lang }) {
           {/* Brand */}
           <div className="space-y-4">
             <Link href={`/${lang}`} className="flex items-center gap-2 group">
-              <div className="bg-[var(--color-primary-600)] p-2 rounded-lg">
-                <ShieldCheck className="w-6 h-6 text-white" />
-              </div>
-              <span className="font-bold text-2xl tracking-tight text-white">
-                MDS
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="MDS Logo" 
+                className="h-12 w-auto object-contain transition-transform group-hover:scale-105" 
+              />
             </Link>
             <p className="text-sm text-slate-400 mt-4 max-w-xs">
               {dict.footer.brandDesc}

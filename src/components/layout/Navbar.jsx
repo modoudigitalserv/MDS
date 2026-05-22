@@ -43,12 +43,11 @@ export function Navbar({ dict, lang }) {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center gap-2 group">
-            <div className="bg-[var(--color-primary-600)] p-2 rounded-lg group-hover:bg-[var(--color-primary-500)] transition-colors">
-              <ShieldCheck className="w-6 h-6 text-white" />
-            </div>
-            <span className="font-bold text-2xl tracking-tight text-[var(--color-secondary-900)] dark:text-white">
-              MDS
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="MDS Logo" 
+              className="h-10 w-auto object-contain transition-transform group-hover:scale-105" 
+            />
           </Link>
 
           {/* Desktop Nav */}
