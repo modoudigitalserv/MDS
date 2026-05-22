@@ -71,7 +71,7 @@ export function Footer({ dict, lang }) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[var(--color-primary-500)] shrink-0" />
-                <span>contact@mds-consulting.com</span>
+                <span>mdsconsultingcontact@gmail.com</span>
               </li>
             </ul>
           </div>
