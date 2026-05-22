@@ -9,21 +9,26 @@ export default function AboutPage() {
       <Section bg="dark" className="py-24 text-center border-b border-slate-800">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">À propos de MDS</h1>
         <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-          Notre mission : vous accompagner vers l'excellence opérationnelle grâce à des solutions IT performantes et un support de qualité.
+          MDS est une société d'ingénierie informatique spécialisée dans le développement de solutions, l'implémentation et le support des systèmes d'information.
         </p>
       </Section>
       <Section bg="white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">Notre Vision</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-            Chez Modou Digital Services (MDS), nous croyons fermement que l'informatique doit être un levier de croissance et non une contrainte. C'est pourquoi nous nous engageons à fournir des services d'infogérance et de consulting IT qui respectent scrupuleusement vos SLA.
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">Notre Vision & Notre Expertise</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
+            Nous intégrons des briques technologiques innovantes, des services sur mesure, du conseil stratégique ainsi que des analyses de marché poussées. Les technologies font partie intégrante de notre esprit d'entreprise.
           </p>
+          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            L'expérience conjuguée de l'ensemble de nos collaborateurs et de nos partenaires dans le domaine des systèmes d'information nous permet d'être présents à l'international, en garantissant un niveau de qualité de service optimal et le meilleur rapport qualité-prix.
+          </p>
+          
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 mt-12">Nos engagements fondamentaux</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {[
-              "Excellence technique",
-              "Proactivité et anticipation",
-              "Transparence totale",
-              "Partenariat long-terme"
+              "Optimisation continue des performances",
+              "Maîtrise de bout en bout des enjeux IT",
+              "Transfert de compétences et formation",
+              "Présence et support à l'international"
             ].map((val, i) => (
               <div key={i} className="flex items-center gap-3 bg-slate-50 dark:bg-[#0f172a] p-4 rounded-lg border border-slate-100 dark:border-slate-800">
                 <CheckCircle className="text-[var(--color-primary-500)] w-6 h-6 shrink-0" />

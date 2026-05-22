@@ -1,54 +1,90 @@
 "use client";
 
 import { Section } from "@/components/ui/Section";
-import { Target, Headphones, Users, Clock, Shield, Server } from "lucide-react";
+import { Globe, Cloud, ShieldCheck, Code, Server, LineChart } from "lucide-react";
 
 export default function ServicesPage() {
   const services = [
     {
       id: "consulting",
-      icon: <Target className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Consulting IT",
-      desc: "Accompagnement stratégique pour votre transformation digitale."
-    },
-    {
-      id: "support",
-      icon: <Headphones className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Support Informatique",
-      desc: "Assistance technique multi-niveaux (N1/N2/N3) avec helpdesk dédié."
-    },
-    {
-      id: "placement",
-      icon: <Users className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Placement IT Support",
-      desc: "Mise à disposition de ressources techniques qualifiées."
-    },
-    {
-      id: "sla",
-      icon: <Clock className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Gestion SLA",
-      desc: "Garantie de disponibilité et respect des engagements de service."
-    },
-    {
-      id: "cyber",
-      icon: <Shield className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Cybersécurité",
-      desc: "Protection de vos données et sécurisation de vos infrastructures."
+      icon: <Globe className="w-12 h-12 text-[var(--color-primary-500)]" />,
+      title: "IT Consulting & Stratégie",
+      desc: "Fort de notre expertise et de notre réputation, nous accompagnons les organisations dans leur transformation numérique pour une meilleure agilité métier.",
+      bullets: [
+        "Audit des processus métiers",
+        "Conduite et management du changement",
+        "Conseil technologique et stratégique",
+        "Externalisation de la R&D"
+      ]
     },
     {
       id: "cloud",
+      icon: <Cloud className="w-12 h-12 text-[var(--color-primary-500)]" />,
+      title: "Solutions Cloud Digitales",
+      desc: "Nous développons des solutions facilement accessibles qui respectent la sécurité et la souveraineté de vos données.",
+      bullets: [
+        "Infrastructure as a Service (IaaS) : Centre de données virtuel décentralisé.",
+        "Platform as a Service (PaaS) : Environnements virtuels flexibles.",
+        "Software as a Service (SaaS) : Messagerie, sauvegardes clients et monitoring.",
+        "Mise en place de Cloud Privé et Hybride"
+      ]
+    },
+    {
+      id: "outsourcing",
+      icon: <ShieldCheck className="w-12 h-12 text-[var(--color-primary-500)]" />,
+      title: "IT Outsourcing & Infogérance",
+      desc: "MDS propose la gestion de systèmes sous haute performance afin que vous puissiez vous concentrer sur votre cœur de métier.",
+      bullets: [
+        "Maintenance régulière du matériel informatique (Serveurs, Réseaux, Poste de travail)",
+        "Sécurisation des systèmes d'information",
+        "Infogérance applicative et gestion des fournisseurs",
+        "Assistance technique (N1/N2/N3) et staffing IT"
+      ]
+    },
+    {
+      id: "integration",
+      icon: <Code className="w-12 h-12 text-[var(--color-primary-500)]" />,
+      title: "Conception & Intégration",
+      desc: "Développement d'applications cross-platform économiques et qualitatives, indépendantes du système d'exploitation.",
+      bullets: [
+        "Architecture globale des systèmes d'information",
+        "Développement applicatif et génie logiciel",
+        "Déploiement et intégration d'ERP/PGI",
+        "Applications mobiles multiplateformes"
+      ]
+    },
+    {
+      id: "datacenter",
       icon: <Server className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Cloud & Infrastructure",
-      desc: "Hébergement, migration et infogérance de serveurs."
+      title: "Transformation Data Center",
+      desc: "De la planification initiale à l'exécution finale, nous apportons une approche unique à l'initiative de transformation de vos centres de données.",
+      bullets: [
+        "Audit des infrastructures existantes",
+        "Modernisation des équipements à la pointe de la technologie",
+        "Virtualisation et consolidation des serveurs",
+        "Assistance et maintien en conditions opérationnelles"
+      ]
+    },
+    {
+      id: "market-data",
+      icon: <LineChart className="w-12 h-12 text-[var(--color-primary-500)]" />,
+      title: "Market Data & Finance",
+      desc: "Une expertise pointue dans le traitement des données financières et les applicatifs métiers pour les marchés boursiers.",
+      bullets: [
+        "Gestion des données financières critiques",
+        "Applications pour intermédiaires de marché (Exchange)",
+        "Développement d'applications ad hoc spécialisées",
+        "Sécurisation des flux transactionnels"
+      ]
     }
   ];
 
   return (
     <div className="pt-20">
       <Section bg="dark" className="py-24 text-center border-b border-slate-800">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Services IT</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Notre Catalogue de Services</h1>
         <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-          Découvrez notre catalogue complet de prestations pour optimiser, sécuriser et maintenir votre système d'information.
+          Nous disposons en interne de toutes les compétences pour accompagner nos partenaires et clients avec une excellente maîtrise des enjeux technologiques de bout en bout.
         </p>
       </Section>
       
@@ -65,18 +101,12 @@ export default function ServicesPage() {
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">{service.title}</h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">{service.desc}</p>
                 <ul className="space-y-3 inline-block text-left">
-                  <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                    <span className="w-2 h-2 rounded-full bg-[var(--color-primary-500)]"></span>
-                    Audit et diagnostic
-                  </li>
-                  <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                    <span className="w-2 h-2 rounded-full bg-[var(--color-primary-500)]"></span>
-                    Accompagnement sur-mesure
-                  </li>
-                  <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                    <span className="w-2 h-2 rounded-full bg-[var(--color-primary-500)]"></span>
-                    Monitoring continu
-                  </li>
+                  {service.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                      <span className="w-2 h-2 mt-2 shrink-0 rounded-full bg-[var(--color-primary-500)]"></span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

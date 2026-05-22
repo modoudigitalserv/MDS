@@ -37,13 +37,14 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Nos Services</h3>
+            <h3 className="text-white font-semibold mb-4">Nos Solutions</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/services#consulting" className="hover:text-[var(--color-primary-500)] transition-colors">Consulting IT</Link></li>
-              <li><Link href="/services#support" className="hover:text-[var(--color-primary-500)] transition-colors">Support Informatique</Link></li>
-              <li><Link href="/services#placement" className="hover:text-[var(--color-primary-500)] transition-colors">Placement IT Support</Link></li>
-              <li><Link href="/services#cloud" className="hover:text-[var(--color-primary-500)] transition-colors">Cloud & Infrastructure</Link></li>
-              <li><Link href="/services#cyber" className="hover:text-[var(--color-primary-500)] transition-colors">Cybersécurité</Link></li>
+              <li><Link href="/services#consulting" className="hover:text-[var(--color-primary-500)] transition-colors">IT Consulting & Stratégie</Link></li>
+              <li><Link href="/services#cloud" className="hover:text-[var(--color-primary-500)] transition-colors">Solutions Cloud Digitales</Link></li>
+              <li><Link href="/services#outsourcing" className="hover:text-[var(--color-primary-500)] transition-colors">IT Outsourcing & Infogérance</Link></li>
+              <li><Link href="/services#integration" className="hover:text-[var(--color-primary-500)] transition-colors">Conception & Intégration</Link></li>
+              <li><Link href="/services#datacenter" className="hover:text-[var(--color-primary-500)] transition-colors">Transformation Data Center</Link></li>
+              <li><Link href="/services#market-data" className="hover:text-[var(--color-primary-500)] transition-colors">Market Data & Finance</Link></li>
             </ul>
           </div>
 
