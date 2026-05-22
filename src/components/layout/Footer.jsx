@@ -70,7 +70,7 @@ export function Footer({ dict, lang }) {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[var(--color-primary-500)] shrink-0" />
-                <span>+33 1 23 45 67 89</span>
+                <span>+212 695 97 71 80</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[var(--color-primary-500)] shrink-0" />
