@@ -27,7 +27,7 @@ export default function HomeClient({ dict, lang }) {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-[#1e293b]">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-screen"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/50 to-[#1e293b]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/60 via-[#1e293b]/80 to-[#1e293b]"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
