@@ -31,5 +31,28 @@
     "contact": "Contact",
     "rights": "All rights reserved.",
     "madeWith": "Made with passion by MDS."
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "desc": "Need IT support, dedicated assistance, or consulting? Our team is at your disposal.",
+    "subtitle": "Let's discuss your IT project",
+    "subdesc": "Fill out the form below and one of our experts will get back to you shortly to discuss your needs.",
+    "addressTitle": "Address",
+    "addressText": "123 Innovation Avenue, 75001 Paris, France",
+    "phoneTitle": "Phone",
+    "phoneText": "+33 1 23 45 67 89",
+    "emailTitle": "Email",
+    "emailText": "contact@mds-consulting.com",
+    "formName": "Full Name",
+    "formNamePlaceholder": "John Doe",
+    "formCompany": "Company",
+    "formCompanyPlaceholder": "Your company",
+    "formEmail": "Work Email",
+    "formEmailPlaceholder": "john@company.com",
+    "formSubject": "Subject of your request",
+    "formSubjectOptions": ["Request a quote", "IT Support", "IT Staffing", "Other"],
+    "formMessage": "Your message",
+    "formMessagePlaceholder": "Describe your needs...",
+    "formSubmit": "Send Request"
   }
 }
