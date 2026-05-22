@@ -10,12 +10,15 @@ export function Footer({ dict, lang }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href={`/${lang}`} className="flex items-center gap-2 group">
+            <Link href={`/${lang}`} className="flex items-center gap-3 group">
               <img 
                 src="/logo.png" 
                 alt="MDS Logo" 
                 className="h-12 w-12 rounded-full object-cover shadow-sm transition-transform group-hover:scale-105" 
               />
+              <span className="font-bold text-2xl tracking-tight text-white">
+                M.D.S
+              </span>
             </Link>
             <p className="text-sm text-slate-400 mt-4 max-w-xs">
               {dict.footer.brandDesc}

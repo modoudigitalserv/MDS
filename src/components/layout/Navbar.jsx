@@ -42,12 +42,15 @@ export function Navbar({ dict, lang }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href={`/${lang}`} className="flex items-center gap-2 group">
+          <Link href={`/${lang}`} className="flex items-center gap-3 group">
             <img 
               src="/logo.png" 
               alt="MDS Logo" 
               className="h-10 w-10 rounded-full object-cover shadow-sm transition-transform group-hover:scale-105" 
             />
+            <span className="font-bold text-2xl tracking-tight text-slate-900 dark:text-white">
+              M.D.S
+            </span>
           </Link>
 
           {/* Desktop Nav */}
