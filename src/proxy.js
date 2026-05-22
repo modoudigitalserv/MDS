@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-let locales = ['fr', 'en'];
-let defaultLocale = 'fr';
+let locales = ['en', 'fr'];
+let defaultLocale = 'en';
 
 export function proxy(request) {
   // Check if there is any supported locale in the pathname
