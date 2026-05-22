@@ -46,7 +46,7 @@ export function Navbar({ dict, lang }) {
             <img 
               src="/logo.png" 
               alt="MDS Logo" 
-              className="h-10 w-auto object-contain transition-transform group-hover:scale-105" 
+              className="h-10 w-10 rounded-full object-cover shadow-sm transition-transform group-hover:scale-105" 
             />
           </Link>
 

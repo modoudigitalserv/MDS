@@ -14,7 +14,7 @@ export function Footer({ dict, lang }) {
               <img 
                 src="/logo.png" 
                 alt="MDS Logo" 
-                className="h-12 w-auto object-contain transition-transform group-hover:scale-105" 
+                className="h-12 w-12 rounded-full object-cover shadow-sm transition-transform group-hover:scale-105" 
               />
             </Link>
             <p className="text-sm text-slate-400 mt-4 max-w-xs">
