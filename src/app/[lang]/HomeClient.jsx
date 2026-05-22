@@ -109,12 +109,6 @@ export default function HomeClient({ dict, lang }) {
               title: "Transformation Data Center",
               desc: "De la planification à l'exécution, nous modernisons vos centres de données pour garantir une infrastructure résiliente, évolutive et performante.",
               href: `/${lang}/services#datacenter`
-            },
-            {
-              icon: <LineChart className="w-8 h-8 text-[var(--color-primary-500)]" />,
-              title: "Market Data",
-              desc: "Solutions spécialisées pour le secteur financier. Gestion experte des données de marché, intégration de flux boursiers et développement d'applications ad hoc.",
-              href: `/${lang}/services#market-data`
             }
           ].map((service, i) => (
             <motion.div

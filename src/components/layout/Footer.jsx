@@ -42,7 +42,6 @@ export function Footer({ dict, lang }) {
               <li><Link href={`/${lang}/services#outsourcing`} className="hover:text-[var(--color-primary-500)] transition-colors">IT Outsourcing & Infogérance</Link></li>
               <li><Link href={`/${lang}/services#integration`} className="hover:text-[var(--color-primary-500)] transition-colors">Conception & Intégration</Link></li>
               <li><Link href={`/${lang}/services#datacenter`} className="hover:text-[var(--color-primary-500)] transition-colors">Transformation Data Center</Link></li>
-              <li><Link href={`/${lang}/services#market-data`} className="hover:text-[var(--color-primary-500)] transition-colors">Market Data & Finance</Link></li>
             </ul>
           </div>
 
@@ -63,8 +62,8 @@ export function Footer({ dict, lang }) {
             <h3 className="text-white font-semibold mb-4">{dict.footer.contact}</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[var(--color-primary-500)] shrink-0" />
-                <span>123 Avenue de l'Innovation, 75001 Paris, France</span>
+                <MapPin className="w-5 h-5 text-[var(--color-primary-500)] shrink-0 mt-1" />
+                <span className="leading-tight">209 RUE MUSTAPHA EL MAANI<br/>ETG 4 N 5 CASABLANCA</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[var(--color-primary-500)] shrink-0" />

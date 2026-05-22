@@ -64,18 +64,6 @@ export default function ServicesPage() {
         "Virtualisation et consolidation des serveurs",
         "Assistance et maintien en conditions opérationnelles"
       ]
-    },
-    {
-      id: "market-data",
-      icon: <LineChart className="w-12 h-12 text-[var(--color-primary-500)]" />,
-      title: "Market Data & Finance",
-      desc: "Une expertise pointue dans le traitement des données financières et les applicatifs métiers pour les marchés boursiers.",
-      bullets: [
-        "Gestion des données financières critiques",
-        "Applications pour intermédiaires de marché (Exchange)",
-        "Développement d'applications ad hoc spécialisées",
-        "Sécurisation des flux transactionnels"
-      ]
     }
   ];
 
